@@ -36,10 +36,9 @@ async function objectsList() {
     let teddies = await getApiData();
     console.log(teddies);
 
-    // select an element to modify
+    // select an element to modify to show teddies list
     let teddiesList = document.querySelector('.bloc2');
     let blocTitle = document.createElement('h2');
-    blocTitle.textContent = "Choisissez votre ours en peluche";
 
     teddiesList.appendChild(blocTitle);
 
@@ -49,20 +48,17 @@ async function objectsList() {
         let contentElt = document.createElement('div');
         let picElt = document.createElement('img')
         let nameElt = document.createElement('h3');
-        let descriptionElt = document.createElement('p');
         let btnElt = document.createElement('a');
 
         //get the data we want to show
         picElt.src = teddy.imageUrl;
         nameElt.textContent = teddy.name;
-        descriptionElt.textContent = teddy.description;
         btnElt.textContent = "Acheter cet article";
 
         teddiesList.appendChild(cardElt);
         cardElt.appendChild(picElt);
         cardElt.appendChild(contentElt)
         contentElt.appendChild(nameElt);
-        contentElt.appendChild(descriptionElt);
         contentElt.appendChild(btnElt);
 
         // attribute a class to the created element

@@ -44,16 +44,14 @@ getApiData = () => {
 // show selected products on product.html
 async function objectSelected() {
   let oneTeddy = await getApiData();
-
-  /* Création d'un item dans session.storage au chargement de la page pour conserver l'ID et les keys / value des produits consultés 
-  afin d'eviter un second appel de l'API lors du push dans le local.storage */
+  //create an item in session.storage on load to keep the id and key/valuesof the product to avoid a 2nd API call on local.storage push
   let teddyInCache_json = JSON.stringify(oneTeddy);
   sessionStorage.setItem(oneTeddy._id, teddyInCache_json);
 
-  // selection d'un élément du DOM pour l'affichage du produit selectionné
+  // select the element where we want to to show the product
   let teddyBlocElt = document.querySelector('.bloc2__item');
 
-  // creation des éléments du DOM necessaire a l'affichage du produit
+  // create the elements to show the product
   let nameElt = document.createElement('h3');
   let picElt = document.createElement('img');
   let descriptionElt = document.createElement('p');
@@ -64,16 +62,16 @@ async function objectSelected() {
   teddyBlocElt.appendChild(descriptionElt);
   teddyBlocElt.appendChild(priceElt);
 
-  // ajout d'une class au bloc price
+  // add a class ot the price block
   priceElt.classList.add('bloc2__item--price');
 
-  // recuperation des valeur necessaire à l'affichage dans les élément créés
+  // get the values for the show element
   nameElt.textContent = (oneTeddy.name);
   picElt.src = oneTeddy.imageUrl;
   descriptionElt.textContent = (oneTeddy.description);
   priceElt.textContent = ("Prix:" + " " + oneTeddy.price / 100 + " " + "€");
 
-  // création du menu déroulant pour la selection des options du produit
+  // create a cascading menu with the color choice
   let colorsOption = oneTeddy.colors;
 
   colorsOption.forEach((colors) => {
@@ -82,14 +80,13 @@ async function objectSelected() {
       document.getElementById("options").appendChild(colorChoice).innerHTML = colors;
   });
 };
-
-//Fonction ajouter le produit au panier de l'utilisateur
+// add the product to the cart
 addtoStorage = () => {
-  //Ecouter l'événement clic pour mettre le produit dans le local.storage
+  //listen to the click event to put the item into local.storage
   let getInCart = document.getElementById("addtocart__btn");
 
   getInCart.addEventListener("click", async function () {
-      //reutilisation de la variable idParams qui correspond aussi à la key de l'objet stocké dans le session storage
+    // reuse idParams which matches the key of the object stored in session.storage
       let teddyInCache_json = sessionStorage.getItem(idParams);
       let teddyInCache = JSON.parse(teddyInCache_json);
 

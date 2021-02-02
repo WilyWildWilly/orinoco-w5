@@ -176,7 +176,7 @@ sendOrder = () => {
                   };
                   sessionStorage.setItem("confirmOrder", JSON.stringify(validOrder));
                   setTimeout(function () {
-                      window.location = 'validation.html';
+                      window.location = 'order_check.html';
                   }, 1500);
                   console.log(validOrder);
 

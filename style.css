@@ -1,0 +1,64 @@
+header {
+  background-color: midnightblue;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between; }
+  header a, header nav, header img {
+    padding-left: 1em;
+    padding-right: 1em; }
+
+body {
+  background-color: mintcream; }
+
+nav {
+  display: flex; }
+  nav a {
+    color: darkorange;
+    text-decoration: none;
+    margin: 0px;
+    padding: 0px;
+    color: color_1; }
+
+.main_bl {
+  display: flex;
+  background-color: mintcream;
+  flex-direction: row-reverse; }
+  @media (max-width: 600px) {
+    .main_bl {
+      flex-direction: column-reverse; } }
+  @media (min-width: 601px) and (max-width: 1025px) {
+    .main_bl {
+      flex-direction: column; } }
+
+.low_nav {
+  display: flex;
+  flex-direction: column; }
+  @media (max-width: 600px) {
+    .low_nav {
+      flex-direction: column-reverse; } }
+  @media (min-width: 601px) and (max-width: 1025px) {
+    .low_nav {
+      flex-direction: row; } }
+  .low_nav button {
+    flex: 1;
+    border: none;
+    border-radius: 0px;
+    background-color: lightgray;
+    color: darkslategray; }
+    .low_nav button:hover {
+      background-color: darkorange;
+      color: mintcream; }
+
+.bloc2 {
+  display: grid;
+  grid-gap: 2em;
+  /* [1] Add some gap between rows and columns */
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  /* [2] Make columns adjust according to the available viewport */
+  grid-auto-rows: 33%;
+  /* [3] Set the height for implicitly-created row track */ }
+  .bloc2 article img {
+    width: 100%; }
+
+/*# sourceMappingURL=style.css.map */

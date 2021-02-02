@@ -4,12 +4,11 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <!--Ajouter les balises - Pour le moment je n'ai mis que le minimum-->
     <meta name="author" content="Guglielmo Chelazzi Grandinetti" />
     <meta name="Publisher" content="Guglielmo Chelazzi Grandinetti" />
     <meta name='description' content='Produit' />
-    <link rel="apple-touch-icon" href="./favicon.ico" />
-    <link rel="icon" href="./favicon.ico" />
+    <link rel="apple-touch-icon" href="../favicon.ico" />
+    <link rel="icon" href="../favicon.ico" />
     <title>Orinoco - Produit</title>
 
     <link rel="stylesheet" href="../style.css" />
@@ -17,11 +16,9 @@
         rel="stylesheet">
     <link rel="icon" href="../favicon.ico" />
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="../front_js/product.js" defer></script>
+    <script src="../frontend/product.js" defer></script>
     <script>
-        $(document).ready(function () {
-
+        document.addEventListener("DOMContentLoaded", (event) => {
             objectSelected();
             addtoStorage();
         });
@@ -30,12 +27,12 @@
 
 <body>
     <header id="header">
-        <h1><a href="../index.html"><img src="../images/logo_orinoco.png" class="img-fluid" alt="Logo du site" /></a>
+        <h1><a href="../index.html"><img src="../images/orinoco_logo.webp" class="img-fluid" alt="Logo du site" /></a>
         </h1>
     </header>
     <nav class="navtop">
         <a href="../index.html" class="navtop__link">Accueil</a>
-        <a href="./panier.html" class="navtop__link">Panier</a>
+        <a href="./cart.html" class="navtop__link">Panier</a>
         <a href="" class="navtop__link">Mon compte</a>
     </nav>
     <main id="mainbloc">
@@ -51,7 +48,7 @@
             </article>
             <div>
                 <label for="options" class="bloc2__optionslabel">Choisissez la couleur: </label>
-                <select name="bearcolors" id="options">
+                <select name="teddycolors" id="options">
                 </select>
             </div>
             <div>
@@ -73,16 +70,12 @@
             <a href="../index.html" class="bloc2__back">Poursuivre les achats</a>
         </div>
     </main>
+        <!-- footer links to legal mentions and contacts -->
     <footer id="footer">
         <nav class="navbot">
             <a href="./mentions.html" class="navtbot__link">Mentions légales</a>
             <a href="mailto:contact@orinoco.com" class="navbot__link">Contact</a>
         </nav>
-
     </footer>
-
-
-
 </body>
-
 </html>

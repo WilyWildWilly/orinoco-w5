@@ -1,0 +1,94 @@
+$colors: (
+  "hdr_ftr_color": midnightblue,
+  "bck_color": darkorange,
+	"color_1": mintcream,
+	"color_2": darkslategray,
+	"color_3": lightgray
+);
+// maps use: 
+// background-color: map-get($colors, "color_1");
+
+
+header{
+  background-color: map-get($colors, "hdr_ftr_color");
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  a, nav, img {
+    padding-left: 1em;
+    padding-right: 1em;
+  }
+}
+body{
+  background-color: map-get($colors, "color_1");
+}
+.bloc1 {
+    nav {
+      
+  }
+}
+  // top nav (cart etc.)
+nav {
+  display: flex; 
+  img {
+
+  }
+  
+  a {
+    color: map-get($colors, "bck_color");
+    text-decoration: none;
+    margin: 0px;
+    padding: 0px;
+    color: color_1;
+  }
+  
+}
+.main_bl {
+  display:flex;
+  background-color: map-get($colors, "color_1");
+  @media (max-width: 600px ) {
+    flex-direction: column-reverse;
+  }
+  @media (min-width: 601px ) and (max-width: 1025px ) {
+    flex-direction: column;
+  }
+  flex-direction: row-reverse;
+}
+
+// the side-on-full/top-on-tab/bottom-on-mob navbar
+.low_nav {
+  display: flex; 
+  @media (max-width: 600px ) {
+    flex-direction: column-reverse;
+  }
+  @media (min-width: 601px ) and (max-width: 1025px ) {
+    flex-direction: row;
+  }
+  flex-direction: column;
+  button {
+    flex: 1;
+    border: none;
+    border-radius: 0px;
+    background-color: map-get($colors, "color_3");
+    color: map-get($colors, "color_2");
+    &:hover{
+      background-color: map-get($colors, "bck_color");
+      color:map-get($colors, "color_1");
+    }
+  }
+}
+
+
+.bloc2 {
+  display: grid;
+  grid-gap: 2em; /* [1] Add some gap between rows and columns */
+  grid-template-columns: repeat( auto-fill, minmax( 200px, 1fr ) ); /* [2] Make columns adjust according to the available viewport */
+  grid-auto-rows: 33%; /* [3] Set the height for implicitly-created row track */
+  article {
+    img {
+      width: 100%;
+    }
+  }
+}
+
