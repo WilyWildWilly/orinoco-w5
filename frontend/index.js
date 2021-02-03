@@ -38,9 +38,7 @@ async function objectsList() {
 
     // select an element to modify to show teddies list
     let teddiesList = document.querySelector('.bloc2');
-    let blocTitle = document.createElement('h2');
 
-    teddiesList.appendChild(blocTitle);
 
     for (let teddy of teddies) {
         // create elements for the list
@@ -53,19 +51,20 @@ async function objectsList() {
         //get the data we want to show
         picElt.src = teddy.imageUrl;
         nameElt.textContent = teddy.name;
-        btnElt.textContent = "Acheter cet article";
 
+        // append elements hierarchically
         teddiesList.appendChild(cardElt);
-        cardElt.appendChild(picElt);
-        cardElt.appendChild(contentElt)
-        contentElt.appendChild(nameElt);
+        cardElt.appendChild(contentElt);
         contentElt.appendChild(btnElt);
+        btnElt.appendChild(picElt);
+        btnElt.appendChild(nameElt);
 
         // attribute a class to the created element
         cardElt.classList.add('card');
         picElt.classList.add('card__pics');
         contentElt.classList.add('card__content');
         btnElt.classList.add('card__btn');
+        nameElt.classList.add('bear__name')
 
         btnElt.setAttribute('href', './pages/product.html?id=' + teddy._id);
     };

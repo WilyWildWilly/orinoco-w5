@@ -1,14 +1,20 @@
-header {
+header, footer, .nav_foot {
   background-color: midnightblue;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between; }
-  header a, header nav, header img {
+  header a, header nav, header img, footer a, footer nav, footer img, .nav_foot a, .nav_foot nav, .nav_foot img {
     padding-left: 1em;
     padding-right: 1em; }
 
+.nav_foot {
+  width: 100%; }
+  .nav_foot a {
+    padding: 2em; }
+
 body {
+  margin: 0px;
   background-color: mintcream; }
 
 nav {
@@ -32,6 +38,8 @@ nav {
       flex-direction: column; } }
 
 .low_nav {
+  width: 40%;
+  background-color: lightgray;
   display: flex;
   flex-direction: column; }
   @media (max-width: 600px) {
@@ -40,7 +48,14 @@ nav {
   @media (min-width: 601px) and (max-width: 1025px) {
     .low_nav {
       flex-direction: row; } }
+  .low_nav .btn_container {
+    display: flex;
+    flex-direction: column; }
   .low_nav button {
+    width: 100%;
+    max-height: 2em;
+    padding-left: 3em;
+    padding-right: 3em;
     flex: 1;
     border: none;
     border-radius: 0px;
@@ -54,11 +69,31 @@ nav {
   display: grid;
   grid-gap: 2em;
   /* [1] Add some gap between rows and columns */
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(28%, 1fr));
   /* [2] Make columns adjust according to the available viewport */
   grid-auto-rows: 33%;
-  /* [3] Set the height for implicitly-created row track */ }
+  /* [3] Set the height for implicitly-created row track */
+  margin: 2em; }
   .bloc2 article img {
     width: 100%; }
+
+.card__pics {
+  border-radius: 8px; }
+
+.card__content {
+  position: relative;
+  text-align: center; }
+  .card__content :hover .bear__name {
+    transform: scaleY(1); }
+  .card__content .bear__name {
+    color: mintcream;
+    background-color: darkslategray;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    transform: scaleY(0);
+    transition: 200ms ease-in-out; }
 
 /*# sourceMappingURL=style.css.map */

@@ -3,13 +3,14 @@ $colors: (
   "bck_color": darkorange,
 	"color_1": mintcream,
 	"color_2": darkslategray,
+	"color_2_a": rgba(47, 79, 79, 30),
 	"color_3": lightgray
 );
 // maps use: 
 // background-color: map-get($colors, "color_1");
 
 
-header{
+header, footer, .nav_foot {
   background-color: map-get($colors, "hdr_ftr_color");
   display: flex;
   flex-direction: row;
@@ -20,7 +21,14 @@ header{
     padding-right: 1em;
   }
 }
+.nav_foot {
+  width: 100%;
+  a {
+    padding: 2em;
+  }
+}
 body{
+  margin: 0px;
   background-color: map-get($colors, "color_1");
 }
 .bloc1 {
@@ -31,10 +39,6 @@ body{
   // top nav (cart etc.)
 nav {
   display: flex; 
-  img {
-
-  }
-  
   a {
     color: map-get($colors, "bck_color");
     text-decoration: none;
@@ -42,7 +46,6 @@ nav {
     padding: 0px;
     color: color_1;
   }
-  
 }
 .main_bl {
   display:flex;
@@ -58,6 +61,8 @@ nav {
 
 // the side-on-full/top-on-tab/bottom-on-mob navbar
 .low_nav {
+  width: 40%;
+  background-color: map-get($colors, "color_3");
   display: flex; 
   @media (max-width: 600px ) {
     flex-direction: column-reverse;
@@ -66,7 +71,18 @@ nav {
     flex-direction: row;
   }
   flex-direction: column;
+  .btn_container {
+    // position: fixed;
+    // right: 7.5%;
+    display: flex;
+    flex-direction: column;
+    // width: 22%;
+  }
   button {
+    width: 100%;
+    max-height: 2em;
+    padding-left: 3em;
+    padding-right: 3em;
     flex: 1;
     border: none;
     border-radius: 0px;
@@ -79,16 +95,41 @@ nav {
   }
 }
 
-
 .bloc2 {
   display: grid;
   grid-gap: 2em; /* [1] Add some gap between rows and columns */
-  grid-template-columns: repeat( auto-fill, minmax( 200px, 1fr ) ); /* [2] Make columns adjust according to the available viewport */
+  grid-template-columns: repeat( auto-fill, minmax( 28%, 1fr ) ); /* [2] Make columns adjust according to the available viewport */
   grid-auto-rows: 33%; /* [3] Set the height for implicitly-created row track */
   article {
     img {
       width: 100%;
     }
   }
+  margin: 2em;
 }
+// single teddies in index list
+.card__pics {
+  border-radius: 8px;
+}
+.card__content {
+  position: relative;
+  text-align: center;
+  :hover{
+    .bear__name{
+      transform: scaleY(1);
+    }
+  }
+  .bear__name {
+    color: map-get($colors, "color_1");
+    background-color: map-get($colors, "color_2_a");
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    transform: scaleY(0);
+    transition: 200ms ease-in-out;
+  }
+}
+
 
