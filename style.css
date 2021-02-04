@@ -8,14 +8,25 @@ header, footer, .nav_foot {
     padding-left: 1em;
     padding-right: 1em; }
 
-.nav_foot {
+.nav_foot, .navtop {
   width: 100%; }
-  .nav_foot a {
-    padding: 2em; }
+  .nav_foot a, .navtop a {
+    padding: 1em; }
 
 body {
+  font-family: 'Lato', sans-serif;
   margin: 0px;
   background-color: mintcream; }
+
+.bloc1 h1 {
+  padding-left: 3%;
+  padding-right: 3%;
+  font-size: 28px;
+  font-style: 700; }
+.bloc1 h2 {
+  padding-left: 3%;
+  padding-right: 3%;
+  font-weight: 300; }
 
 nav {
   display: flex; }
@@ -38,7 +49,6 @@ nav {
       flex-direction: column; } }
 
 .low_nav {
-  width: 40%;
   background-color: lightgray;
   display: flex;
   flex-direction: column; }
@@ -87,7 +97,7 @@ nav {
     transform: scaleY(1); }
   .card__content .bear__name {
     color: mintcream;
-    background-color: darkslategray;
+    background-color: rgba(47, 79, 79, 0.5);
     padding-top: 0.5em;
     padding-bottom: 0.5em;
     position: absolute;
@@ -95,5 +105,26 @@ nav {
     width: 100%;
     transform: scaleY(0);
     transition: 200ms ease-in-out; }
+
+footer {
+  padding: 2em; }
+
+.blue__btn {
+  padding-left: 2em;
+  padding-right: 2em;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  background-color: midnightblue;
+  border: none;
+  border-radius: 0.3em;
+  transition: background-color 200ms ease-in-out; }
+  .blue__btn :hover {
+    background-color: #171768;
+    transition: background-color 200ms ease-in-out; }
+
+button {
+  font-family: 'Lato', sans-serif; }
+  button a {
+    font-family: 'Lato', sans-serif; }
 
 /*# sourceMappingURL=style.css.map */

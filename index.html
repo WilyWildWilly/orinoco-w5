@@ -13,8 +13,8 @@
     <title>Orinoco - Boutique en ligne</title>
 
     <link rel="stylesheet" href="./style.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Arimo&family=Old+Standard+TT:ital@1&display=swap"
-        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
     <script src="frontend/index.js"></script>
 
     <script>
@@ -29,7 +29,9 @@
     <header id="header">
         <a href="index.html"><img src="images/orinoco_logo_blue_thumb.png" class="img-fluid" alt="Logo du site" /></a>
         <nav class="navtop">
-            <a href="./pages/cart.html" class="navtop__link">Panier</a>
+            <button class="blue__btn">
+                <a href="./pages/cart.html" class="navtop__link">Panier</a>
+            </button>
         </nav>
     </header>
     <main id="mainbloc" class="main_bl">
@@ -38,9 +40,9 @@
         or to have independent websites, in which case this nav will be taken out.        -->
         
         <nav class="low_nav">
-            <button>Oursons<a href="#"></a></button>
-            <button>Caméras<a href="pages/cameras.html"></a></button>
-            <button>Meubles<a href="/pages/meubles.html"></a></button>
+            <button>OURSONS<a href="#"></a></button>
+            <button>CAMÉRAS<a href="pages/cameras.html"></a></button>
+            <button>MEUBLES<a href="/pages/meubles.html"></a></button>
         </nav>
         <!-- Products pane -->
         <sidebar>
@@ -48,7 +50,7 @@
                 <div class="bloc1__img"></div>
                 <article class="bloc1__text">
                     <h1>Boutique d'ours en peluche</h1>
-                    <h2>Voici la liste de nos ours en peluche, faits à la main et personnalisables;
+                    <h2>Voici la liste de nos ours en peluche, faits à la main et personnalisables
                 </article>
             </div>
             <div class="bloc2">
@@ -58,8 +60,12 @@
     <!-- footer links to legal mentions and contacts -->
     <footer id="footer">
         <nav class="nav_foot">
-            <a href="./pages/mentions.html" class="navbot__link">Mentions légales</a>
-            <a href="mailto:contact@orinoco.com" class="navtbot__link">Contact</a>
+            <button class="blue__btn">
+                <a href="./pages/mentions.html" class="navbot__link">Mentions légales</a>
+            </button>
+            <button class="blue__btn">
+                <a href="mailto:contact@orinoco.com" class="navbot__link">Contact</a>
+            </button>
         </nav>
     </footer>
 </body>

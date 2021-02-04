@@ -3,12 +3,9 @@ $colors: (
   "bck_color": darkorange,
 	"color_1": mintcream,
 	"color_2": darkslategray,
-	"color_2_a": rgba(47, 79, 79, 30),
+	"color_2_a": rgba(47, 79, 79, 0.5),
 	"color_3": lightgray
 );
-// maps use: 
-// background-color: map-get($colors, "color_1");
-
 
 header, footer, .nav_foot {
   background-color: map-get($colors, "hdr_ftr_color");
@@ -21,22 +18,31 @@ header, footer, .nav_foot {
     padding-right: 1em;
   }
 }
-.nav_foot {
+.nav_foot, .navtop {
   width: 100%;
   a {
-    padding: 2em;
+    padding: 1em;
   }
 }
 body{
+  font-family: 'Lato', sans-serif;
   margin: 0px;
   background-color: map-get($colors, "color_1");
 }
 .bloc1 {
-    nav {
-      
+    h1 {
+      padding-left: 3%;
+      padding-right: 3%;
+      font-size: 28px;
+      font-style: 700;
+  }
+  h2 {
+    padding-left: 3%;
+    padding-right: 3%;
+    font-weight: 300;
   }
 }
-  // top nav (cart etc.)
+// top nav (cart etc.)
 nav {
   display: flex; 
   a {
@@ -61,7 +67,6 @@ nav {
 
 // the side-on-full/top-on-tab/bottom-on-mob navbar
 .low_nav {
-  width: 40%;
   background-color: map-get($colors, "color_3");
   display: flex; 
   @media (max-width: 600px ) {
@@ -72,11 +77,9 @@ nav {
   }
   flex-direction: column;
   .btn_container {
-    // position: fixed;
-    // right: 7.5%;
     display: flex;
     flex-direction: column;
-    // width: 22%;
+
   }
   button {
     width: 100%;
@@ -132,4 +135,28 @@ nav {
   }
 }
 
+footer {
+  padding: 2em;
+}
+// buttons of the header and footer elements
+.blue__btn {
+  padding-left: 2em;
+  padding-right: 2em;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  background-color: map-get($colors, "hdr_ftr_color");
+  border: none;
+  border-radius: 0.3em;
+  transition: background-color 200ms ease-in-out;
+  :hover{
+    background-color: darken(map-get($colors, "hdr_ftr_color"), 2);
+    transition: background-color 200ms ease-in-out;
+  }
+}
+button {
+  font-family: 'Lato', sans-serif;
+  a {
+    font-family: 'Lato', sans-serif;
+  }
+}
 
