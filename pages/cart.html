@@ -29,14 +29,13 @@
 
 <body>
     <header id="header">
-        <h1><a href="../index.html"><img src="../images/orinoco_logo.webp" class="img-fluid" alt="Logo du site" /></a>
-        </h1>
+        <a href="index.html"><img src="../images/orinoco_logo_blue_thumb.png" class="img-fluid" alt="Logo du site" /></a>
+        <nav class="navtop">
+            <button class="blue__btn">
+                <a href="./pages/cart.html" class="navtop__link">Panier</a>
+            </button>
+        </nav>
     </header>
-    <nav class="navtop">
-        <a href="../index.html" class="navtop__link">Accueil</a>
-        <a href="./panier.html" class="navtop__link">Panier</a>
-        <a href="" class="navtop__link">Mon compte</a>
-    </nav>
     <main id="mainbloc">
         <div class="bloc1">
             <div class="bloc1__img"></div>
@@ -70,7 +69,8 @@
                         </tr>
                     </tfoot>
                 </table>
-                <button id="order__btn">Valider la commande</button>
+                <button id="order__btn" class="sub-table__btn">Valider la commande</button>
+                <a href="../index.html"><button id="order__btn" class="sub-table__btn">Poursuivre les achats</button></a>
             </div>
             <div id="bloc2__order" style="display:none">
                 <form method="POST" name="contactbloc" id="contactbloc">
@@ -99,20 +99,19 @@
                     </button>
                 </form>
             </div>
-            <a href="../index.html" class="bloc2__back">Poursuivre mes achats</a>
         </div>
     </main>
-        <!-- footer links to legal mentions and contacts -->
+    <!-- footer links to legal mentions and contacts -->
     <footer id="footer">
-        <nav class="navbot">
-            <a href="./mentions.html" class="navbot__link">Mentions légales</a>
-            <a href="mailto:contact@orinoco.com" class="navtbot__link">Contact</a>
+        <nav class="nav_foot">
+            <button class="blue__btn">
+                <a href="./pages/mentions.html" class="navbot__link">Mentions légales</a>
+            </button>
+            <button class="blue__btn">
+                <a href="mailto:contact@orinoco.com" class="navbot__link">Contact</a>
+            </button>
         </nav>
-
     </footer>
-
-
-
 </body>
 
 </html>

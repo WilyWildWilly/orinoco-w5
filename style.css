@@ -23,7 +23,7 @@ body {
   padding-right: 3%;
   font-size: 28px;
   font-style: 700; }
-.bloc1 h2 {
+.bloc1 h2, .bloc1 p {
   padding-left: 3%;
   padding-right: 3%;
   font-weight: 300; }
@@ -86,6 +86,16 @@ nav {
   margin: 2em; }
   .bloc2 article img {
     width: 100%; }
+  .bloc2 button {
+    border: none;
+    border-radius: 5px;
+    background-color: darkslategray;
+    color: mintcream; }
+  .bloc2 th, .bloc2 td {
+    padding: 3px; }
+    .bloc2 th button, .bloc2 td button {
+      width: 33%;
+      border-radius: 100%; }
 
 .card__pics {
   border-radius: 8px; }
@@ -126,5 +136,11 @@ button {
   font-family: 'Lato', sans-serif; }
   button a {
     font-family: 'Lato', sans-serif; }
+
+#order__btn {
+  width: 100%; }
+  #order__btn a {
+    color: mintcream;
+    text-decoration: none; }
 
 /*# sourceMappingURL=style.css.map */

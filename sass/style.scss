@@ -30,13 +30,13 @@ body{
   background-color: map-get($colors, "color_1");
 }
 .bloc1 {
-    h1 {
-      padding-left: 3%;
-      padding-right: 3%;
-      font-size: 28px;
-      font-style: 700;
+  h1 {
+    padding-left: 3%;
+    padding-right: 3%;
+    font-size: 28px;
+    font-style: 700;
   }
-  h2 {
+  h2, p {
     padding-left: 3%;
     padding-right: 3%;
     font-weight: 300;
@@ -109,6 +109,19 @@ nav {
     }
   }
   margin: 2em;
+  button {
+    border: none;
+    border-radius: 5px;
+    background-color: map-get($colors, "color_2");
+    color: map-get($colors, "color_1");
+  }
+  th, td {
+    padding: 3px;
+    button {
+      width: 33%;
+      border-radius: 100%;
+    }
+  }
 }
 // single teddies in index list
 .card__pics {
@@ -157,6 +170,13 @@ button {
   font-family: 'Lato', sans-serif;
   a {
     font-family: 'Lato', sans-serif;
+  }
+}
+#order__btn{
+  width: 100%;
+  a{
+    color: map-get($colors, "color_1");
+    text-decoration: none;
   }
 }
 
